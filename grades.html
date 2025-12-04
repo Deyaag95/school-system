@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-lang="grades">العلامات</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container card">
+    <header class="header">
+      <h2 data-lang="grades">العلامات</h2>
+      <div>
+        <button id="langBtn4" class="lang-btn">AR / EN</button>
+        <a href="dashboard.html" class="btn small">رجوع</a>
+      </div>
+    </header>
+
+    <form id="gradeForm" onsubmit="addGrade(event)">
+      <label>اختر الطالب (ID)</label>
+      <input id="g_studentId" required>
+      <label>المادة</label>
+      <input id="g_subject" required>
+      <label>العلامة</label>
+      <input id="g_score" type="number" min="0" max="100" required>
+      <button class="btn">حفظ العلامة</button>
+    </form>
+
+    <section id="gradesList"></section>
+  </div>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/lang.js"></script>
+  <script type="module" src="js/grades.js"></script>
+</body>
+</html>

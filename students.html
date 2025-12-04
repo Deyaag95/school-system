@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-lang="students">الطلاب</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container card">
+    <header class="header">
+      <h2 data-lang="students">الطلاب</h2>
+      <div>
+        <button id="langBtn3" class="lang-btn">AR / EN</button>
+        <a href="dashboard.html" class="btn small">رجوع</a>
+      </div>
+    </header>
+
+    <form id="studentForm" onsubmit="addStudent(event)">
+      <label>اسم الطالب</label>
+      <input id="s_name" required>
+      <label>الصف</label>
+      <input id="s_class" required>
+      <label>الرقم التعريفي</label>
+      <input id="s_id" required>
+      <button class="btn">إضافة طالب</button>
+    </form>
+
+    <section id="studentsList"></section>
+  </div>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/lang.js"></script>
+  <script type="module" src="js/students.js"></script>
+</body>
+</html>

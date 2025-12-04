@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-lang="login">تسجيل الدخول</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container card">
+    <div class="header">
+      <h1 data-lang="school">نظام إدارة المدرسة</h1>
+      <button id="langBtn" class="lang-btn">AR / EN</button>
+    </div>
+
+    <form id="loginForm" class="form" onsubmit="login(event)">
+      <label data-lang="email">البريد الإلكتروني</label>
+      <input id="email" type="email" required>
+
+      <label data-lang="password">كلمة المرور</label>
+      <input id="password" type="password" required>
+
+      <div class="row">
+        <label><input type="radio" name="role" value="teacher" checked> معلم</label>
+        <label><input type="radio" name="role" value="student"> طالب</label>
+      </div>
+
+      <button type="submit" class="btn"> <span data-lang="login">تسجيل الدخول</span> </button>
+    </form>
+
+    <p class="small">ليس لديك حساب؟ <a href="#" id="createAccount">إنشاء حساب جديد</a></p>
+  </div>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/lang.js"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
